@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const UserRoutes = require("./router/user");
+const UserRoutes = require("./routes/user");
+const ProductRoutes = require("./routes/product");
 const app = express();
 
 mongoose.connect("mongodb://localhost:27017/sale")
@@ -11,4 +12,8 @@ mongoose.connect("mongodb://localhost:27017/sale")
 
 app.use(express.json())
 app.use("/user", UserRoutes)
+app.listen(4500, () => { console.log("waiting") })
+
+app.use(express.json())
+app.use("/product", ProductRoutes)
 app.listen(4500, () => { console.log("waiting") })
