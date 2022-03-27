@@ -30,3 +30,12 @@ const findWinnerById = async (req, res) => {
         return res.status(400).send(e);
     }
 }
+const findWinnerByItemId = async (req, res) => {
+    try {
+        let w = await Winning.findById(itemId);
+        return res.send(w);
+    }
+    catch (e) {
+        return res.status(400).send(e);
+    }
+}
