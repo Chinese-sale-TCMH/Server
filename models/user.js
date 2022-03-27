@@ -7,3 +7,9 @@ const userSchema = new mongoose.Schema({
     user_phone: string,
     arr_orders: orderSchema
 });
+
+const User = mongoose.model("users", userSchema);
+module.exports = {
+    userSchema,
+    User
+}
