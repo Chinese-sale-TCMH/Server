@@ -28,3 +28,14 @@ const findProductById = async (req, res) => {
         return res.status(400).send(err);
     }
 }
+const deleteProduc=async(req, res) => {
+    let productId = req.params._id;
+    try {
+        let product=await Product.findByIdAndDelete(productId);
+        return res.send(product);
+    }
+    catch(arr)
+    {
+        return res.status(400).send(err);
+    }
+}
