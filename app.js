@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const UserRoutes = require("./routes/user");
+const WinningRoutes = require("./routes/winning");
 const ProductRoutes = require("./routes/product");
 const app = express();
 
@@ -16,4 +17,8 @@ app.listen(4500, () => { console.log("waiting") })
 
 app.use(express.json())
 app.use("/product", ProductRoutes)
+app.listen(4500, () => { console.log("waiting") })
+
+app.use(express.json())
+app.use("/winning", WinningRoutes)
 app.listen(4500, () => { console.log("waiting") })
