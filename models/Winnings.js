@@ -4,3 +4,8 @@ const winningSchema = new mongoose.Schema({
     item_id: String,
     winning_date: Date
 });
+const Winning = mongoose.model("winnings", winningSchema);
+module.exports = {
+    winningSchema,
+    Winning
+}
