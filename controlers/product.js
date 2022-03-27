@@ -9,3 +9,12 @@ const addProduct = async (rec, res) => {
         return res.status(400).send(err);
     }
 }
+const getAllProducts = async (req, res) => {
+    try {
+        let allProduct = await Product.find({});
+        return res.send(allProduct);
+    }
+    catch (arr) {
+        return res.status(400).send(err);
+    }
+}
