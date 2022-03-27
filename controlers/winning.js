@@ -39,3 +39,6 @@ const findWinnerByItemId = async (req, res) => {
         return res.status(400).send(e);
     }
 }
+module.exports = {
+    getAllWinningsByWinningId, addWinning
+}
