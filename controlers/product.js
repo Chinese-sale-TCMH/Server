@@ -18,3 +18,13 @@ const getAllProducts = async (req, res) => {
         return res.status(400).send(err);
     }
 }
+const findProductById = async (req, res) => {
+    try {
+        var id = req.body;
+        let product = await Product.findById(id);
+        return res.send(product);
+    }
+    catch (err) {
+        return res.status(400).send(err);
+    }
+}
