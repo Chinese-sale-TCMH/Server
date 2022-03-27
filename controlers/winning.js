@@ -9,3 +9,15 @@ const addWinning = async (req, res) => {
         return res.status(400).send(e);
     }
 }
+const getAllWinningsByItemId = async (req, res) => {
+    try {
+        let winning = req.body;
+
+        let w = await Winning(winningId);
+        win.winning = w;
+        return res.send(w);
+    }
+    catch (e) {
+        return res.status(400).send(e);
+    }
+}
