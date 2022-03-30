@@ -39,3 +39,9 @@ const deleteProduc=async(req, res) => {
         return res.status(400).send(err);
     }
 }
+module.exports={
+    addProduct,
+    getAllProducts,
+    findProductById,
+    deleteProduc
+}
