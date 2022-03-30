@@ -40,5 +40,8 @@ const findWinnerByItemId = async (req, res) => {
     }
 }
 module.exports = {
-    getAllWinningsByWinningId, addWinning
+     addWinning,
+     getAllWinningsByItemId,
+     findWinnerById,
+     findWinnerByItemId
 }
