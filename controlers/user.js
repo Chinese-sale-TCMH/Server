@@ -10,3 +10,14 @@ const addUser = async (req, res) => {
         return res.status(400).send(err)
     }
 }
+const getAllItemsByUserId = async (req, res) => {
+    let userId = req.params.id;
+    try {
+        let arr = User.findById(userId).arr_orders;
+        res.send(arr);
+    }
+    catch (err) {
+        return res.status(400).send(err);
+    }
+}
+
